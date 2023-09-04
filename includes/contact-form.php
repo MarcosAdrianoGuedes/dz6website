@@ -13,7 +13,7 @@ if( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['msg'])){
     if (MAIL_HOST != null) {
         $to = MAIL_HOST;
     } else {
-        $to = "lebach.tk@gmail.com";
+        $to = "dz6barbearia16@outlook.com";
     }
     $from = $email;
     if (MAIL_TITLE != null) {
@@ -26,10 +26,10 @@ if( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['msg'])){
     $headers .= "MIME-Version: 1.0\n";
     $headers .= "Content-type: text/html; charset=iso-8859-1\n";
     if( mail($to, $subject, $message, $headers) ) {
-        $serialized_data = '{"type":"success", "message":"Contact form successfully submitted. Thank you, I will get back to you soon!"}';
+        $serialized_data = '{"type":"success", "message":"Formulário de contato enviado com sucesso. Obrigado, entrarei em contato em breve"}';
         echo $serialized_data;
     } else {
-        $serialized_data = '{"type":"danger", "message":"Contact form failed. Please send again later!"}';
+        $serialized_data = '{"type":"danger", "message":"Formulário de contato falhou. Por favor, envie novamente mais tarde!"}';
         echo $serialized_data;
     }
 };
